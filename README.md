@@ -2,6 +2,8 @@
 
 Paper trading terminal for crypto and gold with a $100,000 prop firm evaluation, live market data, and a trade journal.
 
+Live URL: https://trading.iqbalfa.my.id
+
 ## Features
 
 - Live BTC/USDT, ETH/USDT, SOL/USDT, and XAU/USD candles and tickers from Binance WebSocket, with a simulated feed as fallback.
