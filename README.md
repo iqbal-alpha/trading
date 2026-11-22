@@ -4,12 +4,19 @@ Paper trading terminal for crypto and gold with a $100,000 prop firm evaluation,
 
 Live URL: https://trading.iqbalfa.my.id
 
+## Screenshots
+
+![Desktop terminal and trade journal](docs/screenshots/desktop.png)
+
+![Mobile trading, order ticket, and journal](docs/screenshots/mobile.png)
+
 ## Features
 
 - Live BTC/USDT, ETH/USDT, SOL/USDT, and XAU/USD candles and tickers from Binance WebSocket, with a simulated feed as fallback.
 - Prop firm rules: $100,000 starting balance, 8% profit target, 10% maximum drawdown.
-- Isolated leverage from 1x to 50x with take profit, stop loss, and liquidation.
-- Trade journal with win rate, profit factor, expectancy, and equity curve.
+- Market and limit orders with isolated leverage from 1x to 50x, take profit, stop loss, and liquidation, shown as price lines on the chart.
+- Trade journal with win rate, profit factor, max drawdown, expectancy, equity curve, and trade history.
+- Responsive layout with a full desktop terminal and a mobile view that uses a bottom sheet order ticket and tab navigation.
 - Optional Supabase sync for shareable read-only reports and a public leaderboard.
 
 ## Tech Stack
