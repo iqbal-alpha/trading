@@ -1,0 +1,122 @@
+@import "tailwindcss";
+@import "../styles/generated/tokens.css";
+
+@theme inline {
+  --color-ground: var(--bg-ground);
+  --color-surface: var(--bg-surface);
+  --color-raised: var(--bg-raised);
+  --color-floating: var(--bg-floating);
+  --color-hairline: var(--border-subtle);
+  --color-outline: var(--border-default);
+  --color-focus-ring: var(--border-focus);
+  --color-ink-primary: var(--text-primary);
+  --color-ink-secondary: var(--text-secondary);
+  --color-ink-muted: var(--text-muted);
+  --color-long: var(--long);
+  --color-long-bright: var(--long-bright);
+  --color-long-tint: var(--long-tint);
+  --color-short: var(--short);
+  --color-short-bright: var(--short-bright);
+  --color-short-tint: var(--short-tint);
+  --color-accent: var(--accent);
+  --color-accent-tint: var(--accent-tint);
+  --color-info: var(--info);
+  --font-sans: var(--font-host-grotesk), system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-chivo-mono), ui-monospace, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: var(--bg-ground);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  overflow-x: clip;
+}
+
+.tabular-nums-strict {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1, "zero" 1;
+}
+
+.glow-long {
+  box-shadow: var(--long-glow);
+}
+
+.glow-short {
+  box-shadow: var(--short-glow);
+}
+
+.glow-accent {
+  box-shadow: var(--accent-glow);
+}
+
+.elevation-floating {
+  box-shadow: var(--elevation-floating);
+}
+
+@keyframes flash-long {
+  0% {
+    background-color: var(--long-flash);
+    color: var(--long-bright);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+@keyframes flash-short {
+  0% {
+    background-color: var(--short-flash);
+    color: var(--short-bright);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+.tick-up {
+  animation: flash-long var(--t-flash) var(--ease-out);
+}
+
+.tick-down {
+  animation: flash-short var(--t-flash) var(--ease-out);
+}
+
+/* Thin obsidian scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-ground);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-default);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-focus);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .tick-up,
+  .tick-down {
+    animation: none !important;
+  }
+}

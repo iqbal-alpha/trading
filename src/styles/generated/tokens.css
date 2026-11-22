@@ -1,0 +1,86 @@
+/* Synced from Figma file: AETHER — Trading Terminal UI (xUsoABLVJXpUelbcfKsGOA) */
+/* Collections: Primitives (Base, 31 tokens) -> AETHER Tokens (Obsidian Dark, 40 tokens) + 4 Effect Styles */
+
+:root,
+[data-theme="obsidian-dark"] {
+  /* Primitive Scale */
+  --slate-950: #07080a;
+  --slate-900: #0c0e12;
+  --slate-850: #12151c;
+  --slate-800: #181c26;
+  --slate-border-subtle: #191d26;
+  --slate-border-default: #222734;
+  --slate-500: #646e82;
+
+  --neutral-50: #f3f4f6;
+  --neutral-400: #9ca3af;
+  --neutral-500: #848d9d;
+
+  --emerald-500: #10b981;
+  --emerald-400: #34d399;
+  --emerald-950-tint: #0d2520;
+  --emerald-900-flash: #0e332b;
+
+  --rose-500: #f43f5e;
+  --rose-400: #fb7185;
+  --rose-950-tint: #26131a;
+  --rose-900-flash: #3a1723;
+
+  --amber-500: #f59e0b;
+  --amber-950-tint: #281e0f;
+  --cyan-500: #06b6d4;
+
+  /* Semantic Aliases (Figma AETHER Tokens) */
+  --bg-ground: var(--slate-950);
+  --bg-surface: var(--slate-900);
+  --bg-raised: var(--slate-850);
+  --bg-floating: var(--slate-800);
+
+  --border-subtle: var(--slate-border-subtle);
+  --border-default: var(--slate-border-default);
+  --border-focus: var(--slate-500);
+
+  --text-primary: var(--neutral-50);
+  --text-secondary: var(--neutral-400);
+  --text-muted: var(--neutral-500);
+
+  --long: var(--emerald-500);
+  --long-bright: var(--emerald-400);
+  --long-tint: var(--emerald-950-tint);
+  --long-flash: var(--emerald-900-flash);
+  --long-glow: 0 0 24px -4px rgba(16, 185, 129, 0.25);
+
+  --short: var(--rose-500);
+  --short-bright: var(--rose-400);
+  --short-tint: var(--rose-950-tint);
+  --short-flash: var(--rose-900-flash);
+  --short-glow: 0 0 24px -4px rgba(244, 63, 94, 0.25);
+
+  --accent: var(--amber-500);
+  --accent-tint: var(--amber-950-tint);
+  --accent-glow: 0 0 20px -4px rgba(245, 158, 11, 0.2);
+
+  --info: var(--cyan-500);
+  --elevation-floating: -8px 12px 32px rgba(0, 0, 0, 0.55);
+
+  /* Radii & Spacing Scale */
+  --radius-panel: 8px;
+  --radius-control: 6px;
+  --radius-pill: 4px;
+
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 12px;
+  --space-lg: 16px;
+  --space-xl: 24px;
+
+  /* Motion Timing & Easing */
+  --t-flash: 180ms;
+  --t-ui: 220ms;
+  --t-panel: 360ms;
+  --t-chart: 700ms;
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.76, 0, 0.24, 1);
+}
